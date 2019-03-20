@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: odoo
+    ports:
+          - "8069:8069"
+    volumes:
+      - ../../:/data:Z
+    command: bash
+    tty: true
+
+#  postgre:
+#    image: postgres:10.0
+#    ports: [5432]
+#    environment:
+#      POSTGRES_PASSWORD: 111
+#      POSTGRES_USER: odoo_db 
+#      POSTGRES_DB: odoo
+
