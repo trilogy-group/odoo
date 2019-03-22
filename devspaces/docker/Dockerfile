@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /data
 
-RUN apt-get update && apt-get install -y 
+RUN apt-get update && apt-get install -y \
     python3 python3-pip python3-pil libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev postgresql-10 && \
     apt-get clean
 
